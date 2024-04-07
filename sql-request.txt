@@ -1,0 +1,11 @@
+SELECT * FROM `mydb-hw`.`products`;
+
+SELECT name, phone from `mydb-hw`.`shippers`;
+
+SELECT avg(price) AS average_price, MAX(price) AS max_price, MIN(price) AS min_price FROM `mydb-hw`.`products`;
+
+SELECT DISTINCT category_id, price FROM `mydb-hw`.`products` ORDER BY price DESC LIMIT 10;
+
+SELECT COUNT(*) AS product_count FROM `mydb-hw`.`products` WHERE price >=20 AND price <=100;
+
+SELECT supplier_id, COUNT(*) AS product_count, AVG(price) AS average_price FROM `mydb-hw`.`products` GROUP BY supplier_id;
